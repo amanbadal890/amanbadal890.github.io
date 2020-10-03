@@ -27,19 +27,14 @@ header{
 }
 
 .navbar{
-   /* position: fixed;
-     display: flex; 
-    width: 100%;
-    height: 58px;
-    background: rgba(255, 247, 247, 0.7); */
-    background-color: #BF8D7A; 
-      position: fixed; 
-     
+   
+    background: rgba(255, 247, 247, 0.7);     
+    position: fixed;      
     height: 40px;
     right: 17px;
-      width: 100%;
-      display: block;
-      transition: top 0.3s;
+    width: 100%;
+    display: block;
+    transition: top 0.3s;
     
 }
 
