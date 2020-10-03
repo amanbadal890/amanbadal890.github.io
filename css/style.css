@@ -17,6 +17,7 @@ body{
     scroll-behavior: smooth;
     /* Scroll doesn't stop between two sections by this... some coding in Section tag below */
     scroll-snap-type: y mandatory;
+    overflow: hidden;
 }
 
 header{
