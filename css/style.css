@@ -1,140 +1,179 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: Century Gothic;    
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
 }
-
-body{
-    overflow: hidden;
+html {
+  /* CSS Smooth Scroll */
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  /* Scroll doesn't stop between two sections by this... some coding in Section tag below */
+  scroll-snap-type: y mandatory;
 }
-
-.main{
+body {
+  font-family: Century Gothic;
+}
+nav {
+  position: fixed;
+  top: 0;
+  background: #2c3e50;
+  height: 80px;
+  width: 100%;
+}
+label.logo {
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 8px;
+  font-weight: bold;
+  font-family: 'Alegreya Sans SC';
+}
+h1{
+    font-family: 'Bad Script';
+    letter-spacing: 0.2rem;
+    font-size: 40px;
+}
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a {
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a.active,
+a:hover {
+  background: #1b9bff;
+  transition: 0.5s;
+}
+/* .checkbtn below refers to 3 bars icon */
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    position: fixed;
     width: 100%;
-    height: 100%;
-    /* CSS Smooth Scroll */
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    /* Scroll doesn't stop between two sections by this... some coding in Section tag below */
-    scroll-snap-type: y mandatory;
-}
-
-header{
-    /* background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../img3.jpg); */
     height: 100vh;
-    background-size: cover;
-    background-position: center;
-}
-
-.navbar{
-   
-    background: rgba(255, 247, 247, 0.7);     
-    position: fixed;      
-    height: 50px;
-    right: 17px;
-    width: 100%;
-    /* display: block; */
-    transition: top 0.3s;
-    
-}
-
-.navbar ul{
-    
-    list-style-type: none;
-    margin-top: 15px;   
-    margin-left: 16px; 
-    
-}
-
-.navbar ul li{    
-    display: inline-block;
-    float: left;
-}
-
-.navbar ul li a{    
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    padding: 15px; 
-    text-align: center;     
-    
-}
-
-.navbar ul li a:hover{
-    
-    background-color: #002E2C;
-    color: white;    
-    transition: 0.3s ease;
-}
-
-.title h1{
-    font-family: 'Raleway', sans-serif;
-    letter-spacing: 0.5rem;
-    color: #fff;
-    font-size: 70px;
-}
-
-.button{
-    margin-top: 15px;
-}
-
-.btn{
-    border: 1px solid #fff;
-    margin-right: 5px;
-    margin-left: 5px;
-    padding: 10px 30px;
-    background-color: #fff;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-}
-
-.btn:hover{
-    background-color: transparent;
-    color:white;
-    transition: 0.6s ease;
-}
-
-section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
     text-align: center;
-    width: 100%;
-    height: 100vh;
-    /* Scroll Snap */
-    scroll-snap-align: center;
+    transition: all 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  a:hover,
+  a.active {
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul {
+    left: 0;
+    width: 40%;
+  }
 }
 
-section#Home{
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../img1.jpg);
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
+.buttons {
+  margin-top: 20px;
 }
 
-section#Howitworks{
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../img4.jpg);
-    height: 100vh;
-    /* background-size: cover;
-    background-position: center; */
+.btn1 {
+  border: 1.5px solid white;
+  border-radius: 3px;
+  padding: 10px 30px;
+  margin-right: 10px;
+  background-color: #fff;
+  color: rgb(0, 0, 0);
 }
 
-section#Pricing{
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url(../img2.jpg);
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
+.btn2 {
+  border: 1.5px solid white;
+  border-radius: 3px;
+  padding: 10px 30px;
+  margin-left: 10px;
+  background-color: #fff;
+  color: rgb(0, 0, 0);
 }
 
-section#Areas{
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url(../img3.jpg);
-    height: 100vh;
-    /* background-size: cover;
-    background-position: center; */
+.btn1:hover,
+.btn2:hover {
+  background-color: transparent;
+  color: white;
+  transition: 0.5s;
 }
 
-section#FAQ{
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../img1.jpg);
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+section#Home {
+  /* starting the sections after skipping 80px top margin (Navigation bar's height) */
+  /* margin-top: 80px;   */
+  background: rgb(220, 225, 233);
+  /* height: calc(100vh - 80px); */
+  height: 100vh;
+  /* height: 625px; */
+  scroll-snap-align: center;
+}
+section#Howitworks {
+  background: rgb(157, 195, 207);
+  height: 100vh;
+  scroll-snap-align: center;
+}
+section#Pricing {
+  background: rgb(155, 170, 238);
+  height: 100vh;
+  scroll-snap-align: center;
+}
+section#Areas {
+  background: rgb(174, 171, 184);
+  height: 100vh;
+  scroll-snap-align: center;
+}
+section#FAQ {
+  background: rgb(116, 186, 207);
+  height: 100vh;
+  scroll-snap-align: center;
 }
